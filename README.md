@@ -1,0 +1,1 @@
+### A demonstration of this program is available at https://1withspaghetti.com/projects/wordlesolver/
