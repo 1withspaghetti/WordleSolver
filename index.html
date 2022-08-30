@@ -1,0 +1,153 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>WordleBot v2.0</title>
+    <meta name="description" content="Bot for solving Wordles">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="nav">
+        <span id="page_auto_button" class="selected">AutoSolve</span>
+        <span id="page_gen_button">Solver</span>
+    </div>
+    <div class="pages">
+        <div class="main" id="page_auto">
+            <h2>WordleBot v2.0</h2>
+            <h3>By Tyler Place</h3>
+            <div class="controls">
+                <img src="img/before.svg" id="nav_previous" title="Undo">
+                <img src="img/play_arrow.svg" id="nav_play" class="" title="Start">
+                <img src="img/pause.svg" id="nav_pause" class="hidden" title="Pause">
+                <img src="img/next.svg" id="nav_next" title="Guess">
+            </div>
+            <input type="range" min="1" max="500" value="500" class="slider" id="nav_slider">
+            <div class="game" id="autogame">
+                <row>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                </row>
+                <row>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                </row>
+                </row>
+                <row>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                </row>
+                <row>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                </row>
+                <row>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                </row>
+                <row>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                </row>
+                <div class="correct-word">
+                    <div id="visibility_on" class="">
+                        <img src="img/visibility_off.svg">
+                        <span>Click to show answer</span>
+                    </div>
+                    <div id="visibility_off" class="hidden">
+                        <img src="img/visibility_on.svg" class="">
+                        <span>The word is: <b id="word">unknown</b></span>
+                    </div>
+                </div>
+            </div>
+            <span class="stats">
+                <b id="games-played">0</b> games played  -  
+                <b id="games-won">0</b> games won  -  
+                <b id="win-percent">0%</b> win rate
+            </span>
+        </div>
+        <div class="main hidden" id="page_gen">
+            <h2>WordleSolver v2.0</h2>
+            <h3>By Tyler Place</h3>
+            <div class="game inputgame" id="inputgame">
+                <row>
+                    <l class="selected"></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                </row>
+                <row>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                </row>
+                </row>
+                <row>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                </row>
+                <row>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                </row>
+                <row>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                </row>
+                <row>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                    <l></l>
+                </row>
+            </div>
+            <span>Try entering the word:</span>
+            <span class="suggestion" id="solve_suggestion">SOARE</span>
+            <span class="buttons">
+                <span id="solve_clear">Clear</span>
+                <span id="solve_solve" class="hidden">Solve</span>
+            </span>
+        </div>
+    </div>
+    <script src="js/GameManager.js"></script>
+    <script src="js/WordleBot_v1.2.js"></script>
+    <script src="js/WordList.js"></script>
+    <script src="js/WordPicks.js"></script>
+    <script src="js/page.js"></script>
+</body>
+</html>
